@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+   Sample data extraction rules file; uncomment and customize as necessary.
+   See https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   for details.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Include the entire home directory -->
+<!--        <include pattern="~/"/>-->
+
+        <!-- Exclude system and temporary directories -->
+        <exclude pattern="~/temp/"/>
+        <exclude pattern="~/tmp/"/>
+        <exclude pattern="~/cache/"/>
+        <exclude pattern="~/Library/"/>
+        <exclude pattern="~/node_modules/"/>
+        <exclude pattern="~/vendor/"/>
+
+        <!-- Exclude hidden files and directories -->
+        <exclude pattern="~/.*"/>
+        <exclude pattern="~/.*/"/>
+
+        <!-- Include documents, pictures, and projects -->
+<!--        <include pattern="~/Documents/**"/>-->
+<!--        <include pattern="~/Pictures/**"/>-->
+<!--        <include pattern="~/Projects/**"/>-->
+
+        <!-- Exclude specific file types that are not necessary for backup -->
+        <exclude pattern="~/Downloads/*.exe"/>
+        <exclude pattern="~/Downloads/*.tmp"/>
+        <exclude pattern="~/Documents/*.log"/>
+        <exclude pattern="~/Projects/**/*.log"/>
+
+        <!-- Include specific file types from Downloads -->
+<!--        <include pattern="~/Downloads/*.pdf"/>-->
+<!--        <include pattern="~/Downloads/*.zip"/>-->
+    </cloud-backup>
+</data-extraction-rules>
