@@ -1,6 +1,8 @@
 package com.example.labux;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginLogic extends AppCompatActivity {
-
     private EditText editTextUsername;
     private EditText editTextPassword;
     private TextView textViewUsernameError;
@@ -42,41 +43,58 @@ public class LoginLogic extends AppCompatActivity {
     }
 
     private void handleLogin() {
-        // Ambil input dari pengguna
         String username = editTextUsername.getText().toString();
         String password = editTextPassword.getText().toString();
-
-        // Validasi input pengguna
         if (validateInput(username, password)) {
-            // Simpan data ke dalam variabel global
             globalUsername = username;
             globalPassword = password;
-
-            // Lakukan proses login (misalnya, autentikasi ke server)
-            // Untuk sekarang, kita hanya menampilkan pesan sukses
             Toast.makeText(LoginLogic.this, "Login successful!", Toast.LENGTH_SHORT).show();
+            //            ini scrip buat pindahan ke halaman detail
+            Intent intent = new Intent(LoginLogic.this, DetailLogic.class);
         }
     }
 
     private boolean validateInput(String username, String password) {
-        boolean isValid = true;
-
-        // Reset pesan kesalahan
+        boolean isValid = false;
         textViewUsernameError.setVisibility(View.GONE);
         textViewPasswordError.setVisibility(View.GONE);
-
-        // Validasi username
         if (username.isEmpty()) {
+            textViewUsernameError.setText("text ga boleh kosong");
+            textViewUsernameError.setVisibility(View.VISIBLE);
+            isValid = false;
+        }else if(username.length() < 8){
+            textViewUsernameError.setText("text harus lebih dari 8 karakter");
+            textViewUsernameError.setVisibility(View.VISIBLE);
+            isValid = false;
+        }
+        else if (username.equals("akun12345678")) {
+            textViewUsernameError.setVisibility(View.GONE);
+            isValid = true;
+        }else {
+            textViewUsernameError.setText("Ada yang salah dengan username-mu!");
             textViewUsernameError.setVisibility(View.VISIBLE);
             isValid = false;
         }
 
-        // Validasi password
-        if (password.length() < 8) {
+        if (password.isEmpty()) {
+            textViewPasswordError.setText("text ga boleh kosong");
+            textViewPasswordError.setVisibility(View.VISIBLE);
+            isValid = false;
+        }else if(password.length() < 8){
+            textViewPasswordError.setText("text harus lebih dari 8 karakter");
             textViewPasswordError.setVisibility(View.VISIBLE);
             isValid = false;
         }
-
+        else if (password.equals("password123")) {
+            textViewPasswordError.setVisibility(View.GONE);
+            isValid = true;
+        }else{
+            textViewPasswordError.setText("Ada yang salah dengan passwordmu!");
+            textViewPasswordError.setVisibility(View.VISIBLE);
+            isValid = false;
+        }
         return isValid;
     }
+
+
 }
