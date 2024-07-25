@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginVertical="10dp"
+    android:layout_marginHorizontal="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="8dp"
+    android:layout_width="312dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@drawable/item_repeater_background">
+
+        <ImageView
+            android:id="@+id/items_image"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/little_mouse"/>
+
+        <TextView
+            android:id="@+id/items_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@+id/items_image"
+            android:text="Items Name"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/poppins_bold"
+            />
+
+        <TextView
+            android:id="@+id/items_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/items_image"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_below="@+id/items_name"
+            android:text="Items Description"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/poppins_regular"
+            />
+
+        <Button
+            style="@style/btn_style"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_button"
+            android:text="Detail"
+            android:textAlignment="center"
+            />
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+

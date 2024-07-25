@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Lab UX</string>
+
+    <!--    Little Mouse-->
+    <string name="litte_mouse_name">Little Mouse</string>
+    <string name="little_mouse_desc">Silly little mouse is ready to play</string>
+    <string name="little_mouse_detail_desc">A small, pixel art illustration of a mouse sitting on its haunches. The cat is facing forward and has a purple shirt and a purple hat. The mouse\'s fur is light brown or beige. The shirt and hat are purple. The background is a neutral gray. The hit box should likely conform to the outline of the mouse\'s body, excluding the tail. This asset could be used as a simple character that interacts with the player or other characters. It could also be used as a decorative element in the environment.</string>
+
+    <!--    Jumping Tribal Mask-->
+    <string name="jumping_tribal_mask">Jumping Tribal Mask</string>
+    <string name="jumping_tribal_mask_desc">Cute little jumping tribal character wearing a mask</string>
+    <string name="jumping_tribal_mask_detail_desc">
+        A pixel art sprite depicting a tribal entity adorned with a ceremonial mask. The mask, likely made of wood or bone, has a stylized animal face (specify the animal if possible) with intricate carvings. The entity\'s body is adorned with simple tribal garb, possibly feathers or cloth. The overall design evokes a sense of mystery and ritual. This asset could be used as an enemy character encountered by the player. Alternatively, it could be used as a neutral or friendly NPC depending on the game\'s lore.
+    </string>
+
+    <!--    Falling Alien-->
+    <string name="falling_alien_name">Falling Alien</string>
+    <string name="falling_alien_desc">Silly little mouse is ready to play</string>
+    <string name="falling_alien_detail_desc">
+        A small, pixel art sprite of a crewmate from the game Among Us. This crewmate appears to be wearing a blue spacesuit with a brown box on their head instead of the standard helmet. The image is static falling alien as planned. This asset could be used as a playable character or a non-playable character (NPC) in a game. It could also be used as a decorative element depending on the context of the game.
+    </string>
+
+    <!--    Red Hooded Ghost-->
+    <string name="red_hooded_ghost_name">Red Hooded Ghost</string>
+    <string name="red_hooded_ghost_desc">Charming red hooded ghost ready for adventure</string>
+    <string name="red_hooded_ghost_detail_desc">
+        A small, pixel art character with a red hood and a black body. The character is facing forward and has a featureless face. The hit box should likely conform to the outline of the character\'s body, including the hood. This character could be used as an enemy character or a non-player character (NPC) in a game. Due to its simple design, it could also be used as a background element.
+    </string>
+
+    <!--    Frustrated Block-->
+    <string name="frustrated_block_name">Frustrated Block</string>
+    <string name="frustrated_block_desc">Big grey block showing frustation</string>
+    <string name="frustrated_block_detail_desc">
+        A gray cube with a cartoon face drawn on one side. The face features a black mustache and round glasses. The cube is gray, with a black mustache and black frames for the glasses. The lenses of the glasses are a bright, reflective color. This asset could be used as a simple obstacle in a platformer or puzzle game. Alternatively, it could be used as a character with limited animation, particularly if the game uses a retro or minimalistic art style.
+    </string>
+
 </resources>
