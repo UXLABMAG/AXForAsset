@@ -2,12 +2,12 @@
     <string name="app_name">Lab UX</string>
 
     <!--    Little Mouse-->
-    <string name="litte_mouse_name">Little Mouse</string>
+    <string name="little_mouse_name">Little Mouse</string>
     <string name="little_mouse_desc">Silly little mouse is ready to play</string>
     <string name="little_mouse_detail_desc">A small, pixel art illustration of a mouse sitting on its haunches. The cat is facing forward and has a purple shirt and a purple hat. The mouse\'s fur is light brown or beige. The shirt and hat are purple. The background is a neutral gray. The hit box should likely conform to the outline of the mouse\'s body, excluding the tail. This asset could be used as a simple character that interacts with the player or other characters. It could also be used as a decorative element in the environment.</string>
 
     <!--    Jumping Tribal Mask-->
-    <string name="jumping_tribal_mask">Jumping Tribal Mask</string>
+    <string name="jumping_tribal_mask_name">Jumping Tribal Mask</string>
     <string name="jumping_tribal_mask_desc">Cute little jumping tribal character wearing a mask</string>
     <string name="jumping_tribal_mask_detail_desc">
         A pixel art sprite depicting a tribal entity adorned with a ceremonial mask. The mask, likely made of wood or bone, has a stylized animal face (specify the animal if possible) with intricate carvings. The entity\'s body is adorned with simple tribal garb, possibly feathers or cloth. The overall design evokes a sense of mystery and ritual. This asset could be used as an enemy character encountered by the player. Alternatively, it could be used as a neutral or friendly NPC depending on the game\'s lore.
