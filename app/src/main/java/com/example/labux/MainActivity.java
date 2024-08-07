@@ -1,29 +1,35 @@
 package com.example.labux;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-//    load repeter
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_main);
+//
+//        // Mulai LoginLogic saat aplikasi dimulai
+//        Intent intent = new Intent(MainActivity.this, LoginLogic.class);
+//        startActivity(intent);
+//
+//        // Tutup MainActivity agar pengguna tidak bisa kembali ke sini dengan menekan tombol kembali
+//        finish();
 //    }
 
-//    load item_list singgel repeter
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.items_list);
-//    }
 
-//    load item_detail singgel repeter
-//    @Override
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_items_detail);
+        setContentView(R.layout.detail);
     }
+
+//    buatkan fungsi untuk handel view detail bila berhaasil login
+//    private void handleDetail() {
+//        Intent intent = new Intent(MainActivity.this, DetailLogic.class);
+//        startActivity(intent);
+//    }
 }
