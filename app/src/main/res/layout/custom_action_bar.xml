@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="74dp">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:background="@color/secondary_color"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+    <!-- Custom views go here -->
+    <ImageButton
+        android:id="@+id/btn_menu"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:background="@drawable/baseline_menu_24"/>
+
+    <TextView
+        android:id="@+id/action_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Page Title"
+        android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>

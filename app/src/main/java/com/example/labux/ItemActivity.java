@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-public class ItemActivity extends AppCompatActivity {
+public class ItemActivity extends MainActivity {
 
     RecyclerView recyclerView;
     ItemAdapter itemAdapter;

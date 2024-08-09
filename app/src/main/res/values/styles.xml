@@ -3,7 +3,7 @@
     <!-- Base application theme -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here -->
-        <item name="android:background">#170229</item>
+<!--        <item name="android:background">#170229</item>-->
         <item name="fontFamily">@font/poppins_regular</item>
     </style>
 
@@ -17,5 +17,10 @@
         <item name="fontFamily">@font/poppins_regular</item>
         <item name="android:textSize">10sp</item>
         <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="CustomMenuItem" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/white</item>
+        <item name="textFillColor">@color/black</item>
     </style>
 </resources>

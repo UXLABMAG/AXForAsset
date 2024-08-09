@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,7 +26,14 @@ public class LoginLogic extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        Remove Action Bar
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getSupportActionBar().hide();
+
         setContentView(R.layout.login);
+
 
         // Referensi view dari layout XML
         editTextUsername = findViewById(R.id.editTextUsername);
@@ -46,53 +55,61 @@ public class LoginLogic extends AppCompatActivity {
         String username = editTextUsername.getText().toString();
         String password = editTextPassword.getText().toString();
         if (validateInput(username, password)) {
-            globalUsername = username;
-            globalPassword = password;
+//            globalUsername = username;
+//            globalPassword = password;
             Toast.makeText(LoginLogic.this, "Login successful!", Toast.LENGTH_SHORT).show();
             //            ini scrip buat pindahan ke halaman detail
-            Intent intent = new Intent(LoginLogic.this, DetailLogic.class);
+            User user = new User(username);
+            MainActivity.setUser(user);
+
+            Intent intent = new Intent(LoginLogic.this, ProfileActivity.class);
+
+
+            startActivity(intent);
+            finish();
         }
     }
 
     private boolean validateInput(String username, String password) {
-        boolean isValid = false;
+        boolean isValid = true;
         textViewUsernameError.setVisibility(View.GONE);
         textViewPasswordError.setVisibility(View.GONE);
         if (username.isEmpty()) {
-            textViewUsernameError.setText("text ga boleh kosong");
-            textViewUsernameError.setVisibility(View.VISIBLE);
-            isValid = false;
-        }else if(username.length() < 8){
-            textViewUsernameError.setText("text harus lebih dari 8 karakter");
+            textViewUsernameError.setText("Username must be filled in!");
             textViewUsernameError.setVisibility(View.VISIBLE);
             isValid = false;
         }
-        else if (username.equals("akun12345678")) {
-            textViewUsernameError.setVisibility(View.GONE);
-            isValid = true;
-        }else {
-            textViewUsernameError.setText("Ada yang salah dengan username-mu!");
-            textViewUsernameError.setVisibility(View.VISIBLE);
-            isValid = false;
-        }
+//        else if(username.length() < 8){
+//            textViewUsernameError.setText("text harus lebih dari 8 karakter");
+//            textViewUsernameError.setVisibility(View.VISIBLE);
+//            isValid = false;
+//        }
+//        else if (username.equals("akun12345678")) {
+//            textViewUsernameError.setVisibility(View.GONE);
+//            isValid = true;
+//        }else {
+//            textViewUsernameError.setText("Ada yang salah dengan username-mu!");
+//            textViewUsernameError.setVisibility(View.VISIBLE);
+//            isValid = false;
+//        }
 
         if (password.isEmpty()) {
-            textViewPasswordError.setText("text ga boleh kosong");
+            textViewPasswordError.setText("Password must be filled in!");
             textViewPasswordError.setVisibility(View.VISIBLE);
             isValid = false;
         }else if(password.length() < 8){
-            textViewPasswordError.setText("text harus lebih dari 8 karakter");
+            textViewPasswordError.setText("Password length must be at least 8 characters!");
             textViewPasswordError.setVisibility(View.VISIBLE);
             isValid = false;
         }
-        else if (password.equals("password123")) {
-            textViewPasswordError.setVisibility(View.GONE);
-            isValid = true;
-        }else{
-            textViewPasswordError.setText("Ada yang salah dengan passwordmu!");
-            textViewPasswordError.setVisibility(View.VISIBLE);
-            isValid = false;
-        }
+//        else if (password.equals("password123")) {
+//            textViewPasswordError.setVisibility(View.GONE);
+//            isValid = true;
+//        }else{
+//            textViewPasswordError.setText("Ada yang salah dengan passwordmu!");
+//            textViewPasswordError.setVisibility(View.VISIBLE);
+//            isValid = false;
+//        }
         return isValid;
     }
 
