@@ -11,4 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 public class DetailLogic extends AppCompatActivity {
 //    tampilkan detail.xml
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.detail);
+    }
 }

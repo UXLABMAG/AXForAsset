@@ -49,8 +49,9 @@ public class LoginLogic extends AppCompatActivity {
             globalUsername = username;
             globalPassword = password;
             Toast.makeText(LoginLogic.this, "Login successful!", Toast.LENGTH_SHORT).show();
-            //            ini scrip buat pindahan ke halaman detail
+
             Intent intent = new Intent(LoginLogic.this, DetailLogic.class);
+            startActivity(intent);
         }
     }
 
