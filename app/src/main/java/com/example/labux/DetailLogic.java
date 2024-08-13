@@ -65,6 +65,7 @@ public class DetailLogic extends AppCompatActivity {
         tvPaymentMethodValue = findViewById(R.id.tvPaymentMethodValue);
         btnNext2 = findViewById(R.id.btnNext2);
 
+//        // Set onClickListener
         btnNext1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
