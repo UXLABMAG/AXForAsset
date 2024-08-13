@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Mulai LoginLogic saat aplikasi dimulai
-        Intent intent = new Intent(MainActivity.this, LoginLogic.class);
+        // Intent intent = new Intent(MainActivity.this, LoginLogic.class);
+        Intent intent = new Intent(MainActivity.this, DetailLogic.class);
         startActivity(intent);
 
         // Tutup MainActivity agar pengguna tidak bisa kembali ke sini dengan menekan tombol kembali
