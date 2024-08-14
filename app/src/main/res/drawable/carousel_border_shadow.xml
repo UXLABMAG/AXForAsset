@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Shadow layer -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#7A33B5E5" /> <!-- Semi-transparent blue color -->
+            <corners android:radius="8dp" /> <!-- Rounded corners -->
+        </shape>
+    </item>
+
+    <!-- Inner content layer -->
+    <item android:left="8dp" android:top="8dp" android:right="8dp" android:bottom="8dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#170229" /> <!-- Background color -->
+            <corners android:radius="8dp" /> <!-- Match the corner radius -->
+        </shape>
+    </item>
+
+</layer-list>
