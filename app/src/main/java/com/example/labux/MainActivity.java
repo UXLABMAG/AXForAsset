@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.menu_home:
-                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, DashboardActivity.class);
+                startActivity(intent);
                 return true;
 
             case R.id.menu_items:

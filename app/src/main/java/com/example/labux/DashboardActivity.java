@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
@@ -14,7 +15,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DashboardActivity extends AppCompatActivity {
-
+    private RecyclerView recyclerView;
+    private ItemAdapter itemAdapter;
     private ViewPager2 imageCarousel;
     private ImageButton prevButton, nextButton;
     private Handler handler = new Handler();
@@ -116,11 +118,11 @@ public class DashboardActivity extends AppCompatActivity {
         // RecyclerView setup using your friend's code
 //        recyclerView = findViewById(R.id.trendingSearchRecycler); // Assuming you keep the same ID
 //        itemAdapter = new ItemAdapter();
-
+//
 //        recyclerView.setAdapter(itemAdapter);
-
-        // Change the layout to horizontal
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+//
+//        // Change the layout to horizontal
+//        recyclerView.setLayoutManager(new GridLayoutManager(, GridLayoutManager.HORIZONTAL, false));
 
     }
 
