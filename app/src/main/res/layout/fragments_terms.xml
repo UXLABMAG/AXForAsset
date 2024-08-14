@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- View for the blur effect -->
+    <View
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/termsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/tab_content_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:justificationMode="inter_word"
+            android:textColor="@color/black"
+            android:text="This tab outlines the acceptable use of the AXForAssets and your responsibilities as a user.\n
+
+\n1.  Acceptable Use
+Content Restrictions: You shall not upload, share, or distribute any content that infringes upon the intellectual property rights of others, including copyrights, trademarks, patents, or trade secrets.
+Prohibited Conduct: You agree to refrain from engaging in any harassing, threatening, abusive, defamatory, obscene, or illegal behavior while using the App.
+Disruption: You shall not disrupt or attempt to disrupt the functionality of the App, its servers, or its infrastructure.\n
+
+\n2.  User-Generated Content
+Ownership: You retain ownership of any user-generated content (including reviews, comments, and asset descriptions) you upload to the App. However, by uploading content, you grant AXForAssets a non-exclusive, royalty-free license to use, reproduce, modify, publish, and distribute such content in connection with the App and its services.
+Responsibility: You are solely responsible for any user-generated content you submit and any consequences arising from its publication." />
+    </LinearLayout>
+
+</FrameLayout>

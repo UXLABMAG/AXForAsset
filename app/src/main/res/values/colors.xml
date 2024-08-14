@@ -19,4 +19,5 @@
     <color name="line_color">#797979</color>
 
     <color name="textColor">#FFFFFF</color>
+    <color name="blur">#4D44D9E8</color>
 </resources>

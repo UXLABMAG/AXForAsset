@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- View for the blur effect -->
+    <View
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/conditionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/tab_content_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:justificationMode="inter_word"
+            android:textColor="@color/black"
+            android:text="These Terms and Conditions govern your access and use of the AXForAssets App.\n
+
+\n1.  License Grant
+Subject to your compliance with these Terms, AXForAssets grants you a non-exclusive, non-transferable license to access and use the App for personal, non-commercial purposes only.\n
+
+\n2.  Asset Purchases
+Licenses: Each asset on the App may have a different license associated with it. You are responsible for understanding the usage rights granted by each license before purchasing any asset.\n
+
+\n3.  Disclaimers and Warranties
+AS-IS: The App and all content and assets offered within it are provided as is without warranty of any kind, express or implied. AXForAssets does not warrant that the App will be uninterrupted, error-free, or secure.\n
+
+\n4.  Limitation of Liability
+AXForAssets shall not be liable for any damages arising out of your use of the App, including but not limited to, direct, indirect, incidental, consequential, or punitive damages." />
+    </LinearLayout>
+
+</FrameLayout>
