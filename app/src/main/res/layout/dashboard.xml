@@ -5,9 +5,6 @@
     android:background="#170229"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Placeholder for Navbar integration -->
-    <!-- TODO: Integrate Navbar here -->
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -17,8 +14,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Placeholder for Greeting Message -->
-            <!-- TODO: Integrate Greeting Message -->
             <TextView
                 android:id="@+id/greetingMessage"
                 android:layout_width="match_parent"
@@ -50,7 +45,7 @@
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/imageCarousel"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"/>
 
                 <ImageButton
                     android:id="@+id/prevButton"
@@ -87,7 +82,6 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"/>
 
-            <!-- New Title Before Tabs -->
             <TextView
                 android:id="@+id/termsConditionsTitle"
                 android:layout_width="wrap_content"
@@ -99,15 +93,13 @@
                 android:padding="28dp"
                 android:gravity="center"/>
 
-            <!-- Custom Styled TabLayout -->
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:tabTextColor="#F2F2F2"
-                app:tabSelectedTextColor="#33B5E5"
-                app:tabIndicatorColor="@color/white"
-                android:background="@drawable/tab_background"
+                app:tabBackground="@drawable/tab_background"
+                app:tabTextColor="@color/white"
+                app:tabSelectedTextColor="@color/blur"
                 android:padding="8dp"
                 app:tabMode="fixed"
                 app:tabGravity="fill" />
@@ -116,7 +108,7 @@
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:elevation="10dp"
+                android:elevation="20dp"
                 android:background="@drawable/tab_content_background"
                 android:outlineSpotShadowColor="#F44336"
                 android:outlineAmbientShadowColor="@color/blur" />
