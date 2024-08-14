@@ -20,15 +20,14 @@ public class DashboardActivity extends AppCompatActivity {
     private Handler handler = new Handler();
     private Runnable autoScrollRunnable;
 
-//    private RecyclerView recyclerView;
-//    private ItemAdapter itemAdapter;
+    private RecyclerView recyclerView;
+    private ItemAdapter itemAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
 
-        // TODO: Placeholder for Navbar integration
         // Initialize ViewPager2 for the image carousel
         imageCarousel = findViewById(R.id.imageCarousel);
         prevButton = findViewById(R.id.prevButton);
@@ -107,21 +106,20 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
-// Set initial background for the first tab (to handle the initial selection)
+        // Set initial background for the first tab (to handle the initial selection)
         TabLayout.Tab firstTab = tabLayout.getTabAt(0);
         if (firstTab != null) {
             firstTab.view.setBackgroundResource(R.drawable.tab_selected_background);
         }
 
-        // RecyclerView setup using your friend's code
-//        recyclerView = findViewById(R.id.trendingSearchRecycler); // Assuming you keep the same ID
-//        itemAdapter = new ItemAdapter();
+        // RecyclerView setup
+        recyclerView = findViewById(R.id.trendingSearchRecycler);
+        itemAdapter = new ItemAdapter();
 
-//        recyclerView.setAdapter(itemAdapter);
+        recyclerView.setAdapter(itemAdapter);
 
         // Change the layout to horizontal
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
     }
 
     // Method to reset auto-scroll when user interacts with the carousel
