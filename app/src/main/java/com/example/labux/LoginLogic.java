@@ -3,6 +3,7 @@ package com.example.labux;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -61,7 +62,7 @@ public class LoginLogic extends AppCompatActivity {
             User user = new User(username);
             MainActivity.setUser(user);
 
-            Intent intent = new Intent(LoginLogic.this, ProfileActivity.class);
+            Intent intent = new Intent(LoginLogic.this, DashboardActivity.class);
 
             startActivity(intent);
             finish();
@@ -74,16 +75,19 @@ public class LoginLogic extends AppCompatActivity {
         textViewPasswordError.setVisibility(View.GONE);
         if (username.isEmpty()) {
             textViewUsernameError.setText("Username must be filled!");
+            textViewUsernameError.setTextColor(Color.RED);
             textViewUsernameError.setVisibility(View.VISIBLE);
             isValid = false;
         }
 
         if (password.isEmpty()) {
             textViewPasswordError.setText("Password must be filled!");
+            textViewPasswordError.setTextColor(Color.RED);
             textViewPasswordError.setVisibility(View.VISIBLE);
             isValid = false;
         }else if(password.length() < 8){
             textViewPasswordError.setText("Password length must be at least 8 characters!");
+            textViewPasswordError.setTextColor(Color.RED);
             textViewPasswordError.setVisibility(View.VISIBLE);
             isValid = false;
         }

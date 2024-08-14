@@ -30,7 +30,7 @@
                 android:text="WELCOME TO"
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                android:fontFamily="@font/poppins_bold" />
 
             <ImageView
                 android:layout_width="200dp"
@@ -64,9 +64,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="10dp"
                 android:text="Username must be filled"
-                android:textColor="#FF5F72"
-                android:textSize="14sp"
-                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="12sp"
                 android:id="@+id/textViewUsernameError"
                 />
 
@@ -97,9 +96,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginBottom="10dp"
                 android:text="Password must be filled"
-                android:textColor="#FF5F72"
-                android:textSize="14sp"
-                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="12sp"
                 android:id="@+id/textViewPasswordError"
                 />
 

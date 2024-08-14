@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="120dp"
+    android:orientation="vertical"
+    android:background="@drawable/tag2">
+
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/tag2"
-        android:radius="10dp"
-        android:padding="20dp">
+        android:background="@drawable/alert_red">
 
         <TextView
             android:id="@+id/tvAlertTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FF0000"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:padding="10dp"
-            android:radius="10dp"
-            android:text="Title"/>
-
-        <TextView
-            android:id="@+id/tvAlertMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:gravity="center"
             android:padding="10dp"
+            android:text="Title"/>
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAlertMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:paddingHorizontal="20dp"
             android:layout_marginTop="10dp"
             android:text="Message"/>
 
         <Button
             android:id="@+id/btnAlertOk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
             android:text="OK"
+            android:textSize="12sp"
             android:textColor="#FFFFFF"
-            android:background="@color/design_default_color_primary"
+            android:background="@drawable/rounded_button"
             android:layout_gravity="center"
-            android:radius="10dp"
-            android:layout_marginTop="20dp"/>
-    </LinearLayout>
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"/>
+</LinearLayout>

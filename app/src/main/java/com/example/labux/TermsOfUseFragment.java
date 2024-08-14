@@ -19,13 +19,13 @@ public class TermsOfUseFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragments_terms, container, false);
 
         // Apply blur effect to the blurView
-        View blurView = view.findViewById(R.id.blurView);
-        if (blurView != null) {
-            ShapeDrawable backgroundDrawable = new ShapeDrawable(new RectShape());
-            backgroundDrawable.getPaint().setColor(0xB344D9E8);  // Adjust the color as needed
-            backgroundDrawable.getPaint().setMaskFilter(new BlurMaskFilter(1, BlurMaskFilter.Blur.NORMAL));
-            blurView.setBackground(backgroundDrawable);
-        }
+//        View blurView = view.findViewById(R.id.blurView);
+//        if (blurView != null) {
+//            ShapeDrawable backgroundDrawable = new ShapeDrawable(new RectShape());
+//            backgroundDrawable.getPaint().setColor(0xB344D9E8);  // Adjust the color as needed
+//            backgroundDrawable.getPaint().setMaskFilter(new BlurMaskFilter(10, BlurMaskFilter.Blur.NORMAL));
+//            blurView.setBackground(backgroundDrawable);
+//        }
 
         return view;
     }

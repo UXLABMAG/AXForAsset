@@ -16,6 +16,8 @@ public class ProfileActivity extends MainActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        getSupportActionBar().setTitle("Profile Page");
+
         Intent intent = getIntent();
 //        User user = intent.getParcelableExtra("user");
         User user = MainActivity.getUser();

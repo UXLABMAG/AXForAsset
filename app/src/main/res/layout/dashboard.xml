@@ -18,11 +18,12 @@
                 android:id="@+id/greetingMessage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:layout_marginStart="13dp"
                 android:text="Welcome, {{variable}}"
                 android:textSize="28sp"
                 android:textColor="#F1F1F1"
-                android:padding="13dp"
-                android:textStyle="bold"
+                android:fontFamily="@font/poppins_semi_bold"
                 android:gravity="start" />
 
             <TextView
@@ -32,20 +33,23 @@
                 android:text="Sale 50% Off Price"
                 android:textSize="18sp"
                 android:textColor="#F1F1F1"
-                android:textStyle="bold"
-                android:padding="28dp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="28dp"
                 android:gravity="center" />
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="match_parent"
                 android:layout_margin="16dp"
-                android:background="@drawable/carousel_border_shadow">
+                android:layout_gravity="center">
 
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/imageCarousel"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_width="250dp"
+                    android:layout_height="170dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/carousel_border_shadow"/>
 
                 <ImageButton
                     android:id="@+id/prevButton"
@@ -69,49 +73,50 @@
                 android:id="@+id/repeaterMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="28dp"
                 android:text="Trending Search"
                 android:textSize="18sp"
                 android:textColor="#F1F1F1"
-                android:textStyle="bold"
-                android:padding="28dp"
+                android:fontFamily="@font/poppins_medium"
                 android:gravity="center"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/trendingSearchRecycler"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"/>
+                android:layout_height="wrap_content"/>
 
             <TextView
                 android:id="@+id/termsConditionsTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="5dp"
                 android:text="Terms &amp; Conditions"
                 android:textSize="18sp"
                 android:textColor="#F1F1F1"
-                android:textStyle="bold"
-                android:padding="28dp"
+                android:fontFamily="@font/poppins_medium"
                 android:gravity="center"/>
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabLayout"
-                android:layout_width="match_parent"
+                style="@style/TabMenu"
+                android:layout_width="310dp"
                 android:layout_height="wrap_content"
-                app:tabBackground="@drawable/tab_background"
-                app:tabTextColor="@color/white"
-                app:tabSelectedTextColor="@color/blur"
-                android:padding="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center"
+                app:tabBackground="@drawable/tab_unselected_background"
+                app:tabGravity="fill"
                 app:tabMode="fixed"
-                app:tabGravity="fill" />
+                app:tabTextColor="@color/white" />
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
-                android:layout_width="match_parent"
+                android:layout_width="317dp"
                 android:layout_height="wrap_content"
-                android:elevation="20dp"
+                android:layout_gravity="center"
                 android:background="@drawable/tab_content_background"
-                android:outlineSpotShadowColor="#F44336"
-                android:outlineAmbientShadowColor="@color/blur" />
+                android:outlineSpotShadowColor="#F44336"/>
 
         </LinearLayout>
 

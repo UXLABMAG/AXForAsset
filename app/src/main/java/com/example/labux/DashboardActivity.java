@@ -3,7 +3,10 @@ package com.example.labux;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
@@ -13,7 +16,7 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import java.util.Arrays;
 import java.util.List;
 
-public class DashboardActivity extends AppCompatActivity {
+public class DashboardActivity extends MainActivity {
 
     private ViewPager2 imageCarousel;
     private ImageButton prevButton, nextButton;
@@ -22,11 +25,17 @@ public class DashboardActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ItemAdapter itemAdapter;
+    private TextView greetingMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
+
+        getSupportActionBar().setTitle("Home Page");
+
+        greetingMessage = findViewById(R.id.greetingMessage);
+        greetingMessage.setText("Welcome, " + user.getUsername());
 
         // Initialize ViewPager2 for the image carousel
         imageCarousel = findViewById(R.id.imageCarousel);
@@ -117,8 +126,6 @@ public class DashboardActivity extends AppCompatActivity {
         itemAdapter = new ItemAdapter();
 
         recyclerView.setAdapter(itemAdapter);
-
-        // Change the layout to horizontal
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
     }
 

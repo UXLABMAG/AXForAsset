@@ -19,7 +19,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="12sp"
             android:justificationMode="inter_word"
             android:textColor="@color/black"
             android:text="This tab outlines the acceptable use of the AXForAssets and your responsibilities as a user.\n

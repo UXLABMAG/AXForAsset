@@ -8,12 +8,34 @@
     android:background="#19002C"
     tools:context=".DetailLogic">
 
+    <LinearLayout
+        android:id="@+id/back_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:paddingVertical="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scrollViewContainer">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/baseline_arrow_back_ios_new_24" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
     <!-- Outer ScrollView wrapping all sections -->
     <ScrollView
         android:id="@+id/scrollViewContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_section"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -26,7 +48,7 @@
             <!-- Image Section -->
             <ImageView
                 android:id="@+id/imgSection"
-                android:layout_width="wrap_content"
+                android:layout_width="350dp"
                 android:layout_height="320dp"
                 android:layout_gravity="center"
                 android:background="@drawable/tag1"
@@ -36,54 +58,57 @@
             <!-- Description Section -->
             <ScrollView
                 android:id="@+id/scrollDescriptionSection"
-                android:layout_width="match_parent"
+                android:layout_width="344dp"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:background="@drawable/tag2"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                >
+                android:background="@drawable/tag2">
 
                 <LinearLayout
                     android:id="@+id/linearDescriptionSection"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="20dp">
 
                     <TextView
                         android:id="@+id/tvTitle"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
                         android:text="Judul"
                         android:textColor="#FFFFFF"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/tvDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
                         android:text="Deskripsi"
                         android:textColor="#FFFFFF"
-                        android:textSize="18sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/tvHeadline"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Headline"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Description"
                         android:textColor="#FFFFFF"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="20dp" />
+                        android:textSize="20sp" />
 
                     <TextView
                         android:id="@+id/tvDetailedDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:justificationMode="inter_word"
                         android:text="Terdapat beberapa masalah pada layout XML yang Anda berikan, khususnya terkait penggunaan ConstraintLayout dan ScrollView yang tidak optimal. Saya akan membantu memperbaiki layout ini agar lebih sesuai dengan praktik terbaik."
                         android:textColor="#FFFFFF"
-                        android:textSize="18sp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
             </ScrollView>
 
@@ -91,8 +116,10 @@
             <ScrollView
                 android:background="@drawable/tag2"
                 android:id="@+id/scrollFormSection1"
-                android:layout_width="match_parent"
+                android:layout_width="344dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
                 android:padding="20dp"
                 android:visibility="visible">
 
@@ -108,17 +135,19 @@
                         android:layout_height="wrap_content"
                         android:text="Email"
                         android:textColor="#FFFFFF"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         android:layout_marginBottom="8dp" />
 
                     <EditText
                         android:background="@drawable/tag3"
                         android:id="@+id/etEmail"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
+                        android:inputType="textEmailAddress"
                         android:hint="e.g. username@gmail.com"
+                        android:paddingStart="10dp"
+                        android:textSize="16dp"
                         android:textColorHint="#CACACA"
-                        android:padding="18dp"
                         android:textColor="#FFFFFF"
                         android:layout_marginBottom="20dp" />
 
@@ -128,9 +157,8 @@
                         android:layout_height="wrap_content"
                         android:text="Payment Method"
                         android:textColor="#FFFFFF"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         android:layout_marginBottom="8dp" />
-
 
                     <Spinner
                         android:background="@drawable/tag1"
@@ -149,11 +177,13 @@
 
                     <Button
                         android:id="@+id/btnNext1"
+                        style="@style/btn_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Next"
+                        android:background="@drawable/rounded_button"
                         android:textColor="#FFFFFF"
-                        android:padding="15dp" />
+                        android:textSize="14sp" />
                 </LinearLayout>
             </ScrollView>
 
@@ -161,8 +191,9 @@
             <ScrollView
                 android:background="@drawable/tag2"
                 android:id="@+id/scrollFormSection2"
-                android:layout_width="match_parent"
+                android:layout_width="344dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:padding="20dp"
                 android:visibility="gone">
 
@@ -178,8 +209,8 @@
                         android:layout_height="wrap_content"
                         android:text="Title"
                         android:textColor="#FFFFFF"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_medium"/>
 
                     <TextView
                         android:id="@+id/tvDescription2"
@@ -187,7 +218,8 @@
                         android:layout_height="wrap_content"
                         android:text="Terdapat beberap."
                         android:textColor="#FFFFFF"
-                        android:textSize="18sp" />
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_regular"/>
 
                     <TextView
                         android:id="@+id/tvEmailLabel2"
@@ -195,8 +227,8 @@
                         android:layout_height="wrap_content"
                         android:text="Email"
                         android:textColor="#FFFFFF"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_medium"
                         android:layout_marginTop="20dp" />
 
                     <TextView
@@ -205,7 +237,8 @@
                         android:layout_height="wrap_content"
                         android:text="l@l.com"
                         android:textColor="#FFFFFF"
-                        android:textSize="18sp" />
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/tvPaymentMethodLabel2"
@@ -213,8 +246,8 @@
                         android:layout_height="wrap_content"
                         android:text="Payment Method"
                         android:textColor="#FFFFFF"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_medium"
                         android:layout_marginTop="20dp" />
 
                     <TextView
@@ -223,15 +256,19 @@
                         android:layout_height="wrap_content"
                         android:text="Paypal"
                         android:textColor="#FFFFFF"
-                        android:textSize="18sp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textSize="14sp"
                         android:layout_marginBottom="20dp" />
 
                     <Button
                         android:id="@+id/btnNext2"
+                        style="@style/btn_style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Next"
+                        android:textSize="14dp"
                         android:textColor="#FFFFFF"
+                        android:background="@drawable/rounded_button"
                         android:padding="15dp" />
                 </LinearLayout>
             </ScrollView>
