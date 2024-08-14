@@ -11,39 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ProfileActivity extends MainActivity {
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.main_menu, menu);
-//
-//        return true;
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//
-//        switch (item.getItemId()) {
-//            case R.id.menu_home:
-//                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
-//                return true;
-//
-//            case R.id.menu_items:
-//                Toast.makeText(this, "Items", Toast.LENGTH_SHORT).show();
-//                return true;
-//
-//            case R.id.menu_profile:
-//                Intent intent = new Intent(ProfileActivity.this, ItemActivity.class);
-//                return true;
-//
-//            case R.id.menu_logout:
-//                Toast.makeText(this, "Log Out", Toast.LENGTH_SHORT).show();
-//                return true;
-//
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

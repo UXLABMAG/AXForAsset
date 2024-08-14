@@ -42,6 +42,7 @@
             android:textColor="@color/white"/>
 
         <Button
+            android:id="@+id/btn_detail"
             style="@style/btn_style"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"

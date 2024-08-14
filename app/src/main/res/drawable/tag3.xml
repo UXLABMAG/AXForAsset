@@ -3,8 +3,8 @@
     android:shape="rectangle">
     <solid android:color="@android:color/transparent" />
     <stroke
-        android:width="5dp"
+        android:width="1dp"
         android:color="#00FFFF" /> <!-- #800080 adalah kode warna ungu dengan opacity 50% -->
-        <!-- buat storekny memiliki radius -->
-        <corners android:radius="10dp" />
-</shape>    
+    <!-- buat storekny memiliki radius -->
+    <corners android:radius="5dp" />
+</shape>

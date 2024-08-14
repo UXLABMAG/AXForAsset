@@ -11,14 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
+        <activity android:name=".ItemActivity"></activity>
         <activity android:name=".MainActivity"></activity>
         <activity android:name=".DetailLogic"></activity>
         <activity
             android:name=".ProfileActivity"
             android:exported="false" />
-        <activity
-            android:name=".ItemActivity"
-            android:exported="false" />
+<!--        <activity android:name=".LoginLogic"></activity>-->
         <activity
             android:name=".LoginLogic"
             android:exported="true">

@@ -42,6 +42,11 @@ public class ItemActivity extends MainActivity {
 
         for (int i = 0; i < items_image.length; i++)
         {
+            if(Item.items.size() >= 5)
+            {
+                break;
+            }
+
             new Item(items_name[i], items_desc[i], items_detail_desc[i], items_image[i]);
         }
 

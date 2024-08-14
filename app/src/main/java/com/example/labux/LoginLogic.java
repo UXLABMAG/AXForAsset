@@ -34,7 +34,6 @@ public class LoginLogic extends AppCompatActivity {
 
         setContentView(R.layout.login);
 
-
         // Referensi view dari layout XML
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
@@ -64,7 +63,6 @@ public class LoginLogic extends AppCompatActivity {
 
             Intent intent = new Intent(LoginLogic.this, ProfileActivity.class);
 
-
             startActivity(intent);
             finish();
         }
@@ -75,26 +73,13 @@ public class LoginLogic extends AppCompatActivity {
         textViewUsernameError.setVisibility(View.GONE);
         textViewPasswordError.setVisibility(View.GONE);
         if (username.isEmpty()) {
-            textViewUsernameError.setText("Username must be filled in!");
+            textViewUsernameError.setText("Username must be filled!");
             textViewUsernameError.setVisibility(View.VISIBLE);
             isValid = false;
         }
-//        else if(username.length() < 8){
-//            textViewUsernameError.setText("text harus lebih dari 8 karakter");
-//            textViewUsernameError.setVisibility(View.VISIBLE);
-//            isValid = false;
-//        }
-//        else if (username.equals("akun12345678")) {
-//            textViewUsernameError.setVisibility(View.GONE);
-//            isValid = true;
-//        }else {
-//            textViewUsernameError.setText("Ada yang salah dengan username-mu!");
-//            textViewUsernameError.setVisibility(View.VISIBLE);
-//            isValid = false;
-//        }
 
         if (password.isEmpty()) {
-            textViewPasswordError.setText("Password must be filled in!");
+            textViewPasswordError.setText("Password must be filled!");
             textViewPasswordError.setVisibility(View.VISIBLE);
             isValid = false;
         }else if(password.length() < 8){
@@ -102,14 +87,7 @@ public class LoginLogic extends AppCompatActivity {
             textViewPasswordError.setVisibility(View.VISIBLE);
             isValid = false;
         }
-//        else if (password.equals("password123")) {
-//            textViewPasswordError.setVisibility(View.GONE);
-//            isValid = true;
-//        }else{
-//            textViewPasswordError.setText("Ada yang salah dengan passwordmu!");
-//            textViewPasswordError.setVisibility(View.VISIBLE);
-//            isValid = false;
-//        }
+
         return isValid;
     }
 

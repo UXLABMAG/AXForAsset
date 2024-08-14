@@ -1,5 +1,6 @@
 package com.example.labux;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
         holder.item_name.setText(current_item.getItem_name());
         holder.item_desc.setText(current_item.getItem_desc());
         holder.item_image.setImageResource(current_item.getItem_image());
+
+//        holder.itemView.findViewById(R.id.btn_detail).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(, DetailLogic.class);
+//            }
+//        });
     }
 
     @Override
