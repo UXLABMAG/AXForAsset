@@ -53,7 +53,7 @@
                 android:layout_gravity="center"
                 android:background="@drawable/tag1"
                 android:padding="8dp"
-                android:src="@drawable/loding" />
+                android:src="@drawable/logo" />
 
             <!-- Description Section -->
             <ScrollView
